@@ -13,12 +13,12 @@
     <div class="playlist">
       <van-grid :border="false" :column-num="3">
         <ul>
-          <li v-for="(item,index) of list" :key='index'>
+          <li v-for="(item,index) of [1,2,3,4,5,6,1,7,8,9,9]" :key='index'>
             <div>
               <img src="./../../assets/images/1.jpg" alt="">
-              <span>{{item.num}}</span>
+              <span>999</span>
             </div>
-            <p>{{item.describe}}</p>
+            <p>宁宁之歌</p>
           </li>
         </ul>
       </van-grid>
@@ -34,20 +34,6 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      list:[
-        {describe:'投我以木瓜',num:'111万'},
-        {describe:'报之以琼琚',num:'222万'},
-        {describe:'匪报也',num:'333万'},
-        {describe:'永以为好也',num:'444万'},
-        {describe:'投我以木桃',num:'555万'},
-        {describe:'报之以琼瑶',num:'666万'},
-        {describe:'匪报也',num:'777万'},
-        {describe:'永以为好也',num:'888万'},
-        {describe:'投我以木李',num:'999万'},
-        {describe:'报之以琼玖',num:'101万'},
-        {describe:'匪报也',num:'123万'},
-        {describe:'永以为好也',num:'456万'},
-      ]
     }
   }
 }
