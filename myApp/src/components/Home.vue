@@ -13,7 +13,7 @@
     <div class="playlist">
       <van-grid :border="false" :column-num="3">
         <ul>
-          <li v-for="item of list" key>
+          <li v-for="(item,index) of list" :key='index'>
             <div>
               <img :src="item.src" alt="">
               <span>{{item.num}}</span>
