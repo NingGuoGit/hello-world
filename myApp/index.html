@@ -2,8 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0,maximum-scable=1.0,minimum-scable=1.0">
     <title>my-project</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .van-tab span{
+        font-size: 0.36rem;
+      }
+    </style>
+    <script>
+      var deviceWidth = document.documentElement.clientWidth;
+      if(deviceWidth > 720) deviceWidth = 720;
+      document.documentElement.style.fontSize = deviceWidth/7.2 + 'px';
+    </script>
   </head>
   <body>
     <div id="app"></div>
