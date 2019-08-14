@@ -2,9 +2,9 @@
     <div>
       <Head/>
       <van-tabs>
-        <van-tab v-for="item of list" :title="item.title">
+        <van-tab v-for="(item,index) of list" :title="item.title" :key='index'>
           <ul>
-            <li v-for="items of item.name">
+            <li v-for="(items,index) of item.name" :key='index'>
               <a href="">
                 <img src="./../../assets/images/2.jpg" alt="">
                 <span>{{items}}</span>
@@ -59,4 +59,5 @@
     width: 2rem;
     height: 2rem;
   }
+  
 </style>

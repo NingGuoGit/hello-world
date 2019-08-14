@@ -1,7 +1,7 @@
 <template>
     <div>
       <Header>
-        <van-nav-bar title="云音悦" left-text="" left-arrow>
+        <van-nav-bar title="云音乐" left-text="" left-arrow>
           <van-icon name="wap-nav" slot="left" />
           <van-icon name="search" slot="right" @click="search"></van-icon>
         </van-nav-bar>
@@ -20,8 +20,8 @@
     name: "Head",
     data() {
       return {
-        active: 2,
-      };
+        active: 2
+    }
     },
     methods:{
       search(){
@@ -33,6 +33,10 @@
 </script>
 
 <style scoped>
+.router-link-exact-active{
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  }
 div{
   background: #D44439;
   color: #fff;
@@ -47,7 +51,10 @@ nav{
   height: 1rem;
 }
 nav a{
-  color:#fff;
+  color:#ccc;
   font-size:0.36rem;
+}
+[class*=van-hairline]::after{
+  border:none;
 }
 </style>

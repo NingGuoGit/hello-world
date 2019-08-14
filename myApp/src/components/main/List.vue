@@ -4,13 +4,13 @@
       <h3>官方榜</h3>
       <div class="list">
         <ul>
-          <li v-for="item of arr">
+          <li v-for="(item,index) of arr" :key='index'>
             <a href="">
               <img src="./../../assets/images/3.jpg" alt="">
               <span>{{item}} </span>
             </a>
             <div class="sing">
-              <div class="div" v-for="(items,index) of list">
+              <div class="div" v-for="(items,index) of list" :key='index'>
                 <h4>{{index+1}}.{{items}} </h4>
               </div>
             </div>
@@ -20,7 +20,7 @@
       <h3>全球榜</h3>
       <van-grid :border="false" :column-num="3">
         <ul>
-          <li v-for="it of lis" class="lis">
+          <li v-for="(it,index) of lis" class="lis" :key='index'>
             <img src="./../../assets/images/5.jpg" alt="">
             <span>{{it}} </span>
           </li>

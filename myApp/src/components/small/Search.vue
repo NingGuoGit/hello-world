@@ -1,13 +1,14 @@
 <template>
     <div>
       <nav>
-        <router-link to="/" style="float:left"> &lt; </router-link>
+        <router-link to="/" style="float:left">
+          <i class="van-icon van-icon-arrow-left van-nav-bar__arrow"></i>
+        </router-link>
         <van-search placeholder="请输入搜索关键词" v-model="value"  style="float:left"/>
       </nav>
-      <!--  -->
       <h3>热门搜索</h3>
       <ul class="list">
-        <li v-for="item of arr"><a href=""><van-tag type="danger">{{item}}</van-tag></a></li>
+        <li v-for="(item,index) of arr" :key='index'><a href=""><van-tag type="danger">{{item}}</van-tag></a></li>
       </ul>
     </div>
 </template>
@@ -39,9 +40,9 @@
     margin-left: 0.30rem;
     width: 10%;
   }
-  .van-search[data-v-67662d90]{
+  .van-search{
     margin-top: 0.30rem;
-    width: 80%;
+    width: 85%;
   }
   h3{
     font-size:0.36rem;

@@ -13,7 +13,7 @@
     <div class="playlist">
       <van-grid :border="false" :column-num="3">
         <ul>
-          <li v-for="(item,index) of [1,2,3,4,5,6,1,7,8,9,9]" :key='index'>
+          <li v-for="(item,index) of [1,2,3,4,5,6,1,7,8,9,9,1]" :key='index'>
             <div>
               <img src="./../../assets/images/1.jpg" alt="">
               <span>999</span>
