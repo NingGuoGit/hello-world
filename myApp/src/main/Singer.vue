@@ -6,20 +6,20 @@
           <ul>
             <li v-for="(items,index) of item.name" :key='index'>
               <a href="">
-                <img src="./../../assets/images/2.jpg" alt="">
+                <img src="./../assets/images/2.jpg" alt="">
                 <span>{{items}}</span>
               </a>
             </li>
           </ul>
         </van-tab>
-        <van-index-bar></van-index-bar>
+        
       </van-tabs>
 
     </div>
 </template>
 
 <script>
-  import Head from './../small/Head'
+  import Head from './../components/small/Head'
   export default {
       name: "Singer",
       components:{Head},
@@ -59,5 +59,5 @@
     width: 2rem;
     height: 2rem;
   }
-  
+
 </style>

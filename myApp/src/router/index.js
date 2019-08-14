@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/main/Home'
-import Singer from '@/components/main/Singer'
-import List from '@/components/main/List'
+import Home from '@/main/Home'
+import Singer from '@/main/Singer'
+import List from '@/main/List'
 import Search from '@/components/small/Search'
 
 Vue.use(Router)

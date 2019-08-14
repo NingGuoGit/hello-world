@@ -36,7 +36,7 @@
 .router-link-exact-active{
   color: #fff;
   border-bottom: 2px solid #fff;
-  }
+}
 div{
   background: #D44439;
   color: #fff;

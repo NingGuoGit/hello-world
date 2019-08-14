@@ -6,7 +6,7 @@
         <ul>
           <li v-for="(item,index) of arr" :key='index'>
             <a href="">
-              <img src="./../../assets/images/3.jpg" alt="">
+              <img src="./../assets/images/3.jpg" alt="">
               <span>{{item}} </span>
             </a>
             <div class="sing">
@@ -21,7 +21,7 @@
       <van-grid :border="false" :column-num="3">
         <ul>
           <li v-for="(it,index) of lis" class="lis" :key='index'>
-            <img src="./../../assets/images/5.jpg" alt="">
+            <img src="./../assets/images/5.jpg" alt="">
             <span>{{it}} </span>
           </li>
         </ul>
@@ -30,7 +30,7 @@
 </template>
 
 <script>
-  import Head from './../small/Head'
+  import Head from './../components/small/Head'
   export default {
       name: "List",
       components:{Head},

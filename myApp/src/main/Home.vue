@@ -3,10 +3,10 @@
     <Head/>
     <div class="banner">
       <van-swipe :autoplay="1000" indicator-color="#D44439">
-        <van-swipe-item><img src="./../../assets/images/01.jpeg" alt=""></van-swipe-item>
-        <van-swipe-item><img src="./../../assets/images/02.jpg" alt=""></van-swipe-item>
-        <van-swipe-item><img src="./../../assets/images/03.jpg" alt=""></van-swipe-item>
-        <van-swipe-item><img src="./../../assets/images/04.jpg" alt=""></van-swipe-item>
+        <van-swipe-item><img src="./../assets/images/01.jpeg" alt=""></van-swipe-item>
+        <van-swipe-item><img src="./../assets/images/02.jpg" alt=""></van-swipe-item>
+        <van-swipe-item><img src="./../assets/images/03.jpg" alt=""></van-swipe-item>
+        <van-swipe-item><img src="./../assets/images/04.jpg" alt=""></van-swipe-item>
       </van-swipe>
     </div>
     <h2>推荐歌单</h2>
@@ -15,7 +15,7 @@
         <ul>
           <li v-for="(item,index) of [1,2,3,4,5,6,1,7,8,9,9,1]" :key='index'>
             <div>
-              <img src="./../../assets/images/1.jpg" alt="">
+              <img src="./../assets/images/1.jpg" alt="">
               <span>999</span>
             </div>
             <p>宁宁之歌</p>
@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import Head from './../small/Head'
+import Head from './../components/small/Head'
 export default {
   name: 'Home',
   components:{Head},
