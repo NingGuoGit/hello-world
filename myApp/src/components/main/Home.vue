@@ -3,10 +3,10 @@
     <Head/>
     <div class="banner">
       <van-swipe :autoplay="1000" indicator-color="#D44439">
-        <van-swipe-item><img src="./../assets/images/01.jpeg" alt=""></van-swipe-item>
-        <van-swipe-item><img src="./../assets/images/02.jpg" alt=""></van-swipe-item>
-        <van-swipe-item><img src="./../assets/images/03.jpg" alt=""></van-swipe-item>
-        <van-swipe-item><img src="./../assets/images/04.jpg" alt=""></van-swipe-item>
+        <van-swipe-item><img src="./../../assets/images/01.jpeg" alt=""></van-swipe-item>
+        <van-swipe-item><img src="./../../assets/images/02.jpg" alt=""></van-swipe-item>
+        <van-swipe-item><img src="./../../assets/images/03.jpg" alt=""></van-swipe-item>
+        <van-swipe-item><img src="./../../assets/images/04.jpg" alt=""></van-swipe-item>
       </van-swipe>
     </div>
     <h2>推荐歌单</h2>
@@ -15,7 +15,7 @@
         <ul>
           <li v-for="(item,index) of list" :key='index'>
             <div>
-              <img src="./../assets/images/1.jpg" alt="">
+              <img src="./../../assets/images/1.jpg" alt="">
               <span>{{item.num}}</span>
             </div>
             <p>{{item.describe}}</p>
@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import Head from './zujian/Head'
+import Head from './../small/Head'
 export default {
   name: 'Home',
   components:{Head},

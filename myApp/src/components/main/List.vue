@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import Head from './zujian/Head'
+  import Head from './../small/Head'
   export default {
       name: "List",
       components:{Head}
