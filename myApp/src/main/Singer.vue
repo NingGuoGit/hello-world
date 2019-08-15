@@ -1,22 +1,40 @@
-a<template>
+<template>
     <div>
       <Head/>
-      <van-tabs>
-        <van-tab v-for="(item,index) of list" :title="item.title" :key='index'>
-          <ul>
-            <li v-for="(items,index) of item.name" :key='index'>
-              <a href="">
-                <img src="./../assets/images/2.jpg" alt="">
-                <span>{{items}}</span>
-              </a>
-            </li>
-          </ul>
-        </van-tab>
-        <div class="letter">
-          <span v-for="(ite,index) of arr" :key="index">{{ite}} </span>
+      <div class="tab">
+        <div class="tab-title">
+          <div v-for="(item,index) of list"
+          :class="{active:index == num}"
+          :key='index'
+          @click="tab(index)"
+          class="title"
+          >{{item}}
+          </div>
+          <div class="letter">
+            <i>首字母：</i>
+            <span
+              :class="active==index?'itemsCSS active':'itemsCSS default'"
+              @click="activeClk(index)"
+              v-for="(item,index) in arr"
+              :key="index"
+            >{{item}}</span>
+          </div>
+
+        </div>
+        <div class="content" style="width:100%;">
+          <div
+          v-for='(items,index) of lis'
+          :key='index'
+          v-show=" index == num ">{{items}}</div>
+          <div class="zimu">
+          <div
+          v-for='(it,index) of arrL'
+          :key='index'
+          v-show=" index == active ">{{it}}</div>
+        </div>
         </div>
 
-      </van-tabs>
+      </div>
 
     </div>
 </template>
@@ -28,63 +46,57 @@ a<template>
       components:{Head},
       data() {
         return {
-          list:[
-            {title:'分类(默认热门)',name:['邓紫棋','薛之谦','花粥','李荣浩','华晨宇','周深']},
-            {title:'华语男',name:['林俊杰','陈奕迅','周杰伦','林宥嘉','薛之谦','毛不易','李荣浩','华晨宇','周深']},
-            {title:'华语女',name:['田馥甄','王菲','刘若英','A-lin','莫文蔚','孙燕姿','邓紫棋','花粥']},
-            {title:'华语组合',name:['SHE','苏打绿','F.I.R','牛奶咖啡','五月天','Beyond','逃跑计划','声入人心男团','好妹妹']},
-            {title:'欧美男',name:['Justin Bieber','Christine Welch','The Chainsmokers','Billie Eilish','Coldplay','Maroon 5']},
-          ],
-          arr:['A','B','C','D','E','F','G']
-          // arr:[
-          //   {title:'A',content:['A-lin','阿杜'],flag:true},
-          //   {title:'B',content:['Beyond','By2'],flag:false},
-          //   {title:'C',content:['陈奕迅','陈小春','蔡依林'],flag:false},
-          //   {title:'D',content:['邓丽君','大张伟'],flag:false},
-          //   {title:'E',content:['Exo'],flag:false},
-          //   {title:'F',content:['F.I.R','方大同'],flag:false},
-          //   {title:'G',content:['G.E.M.邓紫棋','古巨基'],flag:false},
-          // ]
+          num: 1,
+          list:['分类(默认热门)','华语男','华语女','华语组合','欧美男'],
+          lis:['邓紫棋','薛之谦','花粥','李荣浩','华晨宇','周深'],
+          active: 1,
+          arr: ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'],
+          arrL:['A-lin','Beyond','陈奕迅','邓丽君','Exo','F.I.R','G.E.M.邓紫棋']
         }
       },
-      // methods:{
-      //       hh(index){
-      //           for(var i=0;i<this.arr.length;i++){
-      //               this.arr[i].flag = false
-      //           }
-      //           this.arr[index].flag=true
-      //       }
-      //   }
+      methods:{
+          tab(index) {
+              this.num = index;
+          },
+          activeClk(index){
+              this.active=index;
+          }
+      }
   }
 </script>
 
 <style scoped>
-  .van-tab span{
-    font-size: 0.26rem;
-  }
-  ul{
-    padding-left: 0.30rem;
-  }
-  li{
-    border-bottom: 1px solid #ccc;
-  }
-  a{
-    height: 2rem;
-    font-size:0.36rem;
-  }
+
   img{
     width: 2rem;
     height: 2rem;
   }
-  van-tabs{
-    position: relative;
+  .tab-title{
+    width: 100%;
+    height: 2.00rem;
+  }
+  .tab-title .title{
+    line-height: 0.60rem;
+    float: left;
+    font-size:0.28rem;
+    margin-right:0.30rem;
+  }
+  .tab-title .active{
+    color:#D44439;
   }
   .letter{
-    position: absolute;
-    top:0;
-    margin-left: 0.30rem;
+    line-height: 0.60rem;
+    /* margin: */
   }
-  .letter span{
-    font-size:0.36rem;
+  i{
+    font-size:0.28rem;
+    font-style: normal;
+    color:#ccc;
+    float:left;
+  }
+  span{
+    float: left;
+    font-size: 0.30rem;
+    margin:0 0.1rem;
   }
 </style>
